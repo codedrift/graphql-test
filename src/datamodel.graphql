@@ -1,0 +1,10 @@
+type User {
+    cool: Boolean
+    name: String
+  }
+
+type Query {
+	hello: String
+	random: Float!
+	users: [User]
+}
