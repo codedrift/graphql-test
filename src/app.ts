@@ -21,8 +21,9 @@ const root = {
   random: (): number => {
     return Math.random();
   },
-  users: (): User[] => {
-    return getUsers();
+  users: ({name}: {name: string}): User[] => {
+    console.log("gql get users", name);
+    return getUsers().filter(u => u.name === name);
   }
 };
 
